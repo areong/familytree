@@ -1,13 +1,5 @@
-DOT = dot -v -Tsvg -o
-NEATO = neato -v -Tsvg -o
-DIAGRAMS = \
-	FamilyTree.dot.svg\
-	FamilyTree.neato.svg
+PYTHON = python # On Ubuntu, change to python3.
 
-%.dot.svg: %.dot
-	$(DOT) $@ $<
-
-%.neato.svg: %.dot
-	$(NEATO) $@ $<
-
-all: $(DIAGRAMS)
+all:
+	$(PYTHON) familytree.py
+	cd output; make
