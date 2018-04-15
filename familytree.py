@@ -163,5 +163,5 @@ class FamilyTreeDatabase():
 
 if __name__ == '__main__':
     family_tree_database = FamilyTreeDatabase()
-    family_tree_database.read_csv_files('FamilyTree.People.csv', 'FamilyTree.Families.csv', 'FamilyTree.Relations.csv')
-    family_tree_database.write_dot_file('FamilyTree.dot')
+    family_tree_database.read_csv_files('input/FamilyTree - People.csv', 'input/FamilyTree - Families.csv', 'input/FamilyTree - Relations.csv')
+    family_tree_database.write_dot_file('output/FamilyTree.dot')
