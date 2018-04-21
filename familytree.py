@@ -104,8 +104,11 @@ class FamilyTreeDatabase():
     def write_dot_file(self, dot_filename):
         with codecs.open(dot_filename, 'w', 'utf-8') as dot_file:
             dot_file.write('digraph {\n')
+            dot_file.write('\toverlap = vpsc;\n')
+            dot_file.write('\tsep = "+20,20";\n')
+            dot_file.write('\tsplines = spline;\n')
             dot_file.write('\tnode [shape=box]\n')
-            dot_file.write('\tedge [len=1.2]\n\n')
+            dot_file.write('\tedge [len=1.3]\n\n')
 
             # People
             for person_name, person in self.people.items():
